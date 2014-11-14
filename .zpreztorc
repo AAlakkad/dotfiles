@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'history' \
   'node' \
-  'ssh'
+  'ssh' \
+  'syntax-highlighting' 
 
 #
 # Editor
