@@ -26,6 +26,7 @@ NeoBundle 'Shougo/vimproc', {
             \    },
             \ }
 
+let g:neobundle#install_process_timeout=1500
 " General
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
@@ -42,15 +43,23 @@ NeoBundle 'auto_mkdir'
 NeoBundle 'MatchTag'
 NeoBundle 'AutoClose'
 NeoBundle 'ervandew/supertab'
-NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'terryma/vim-multiple-cursors'
+
+" Snippets
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 
 " Development
 NeoBundle 'shawncplus/phpcomplete.vim'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'spf13/PIV' " PHP Integration environment for Vim
 NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'xsbeats/vim-blade'
 
 " Beautifying & Lintering
 NeoBundle 'maksimr/vim-jsbeautify'
@@ -100,6 +109,8 @@ set autowrite  "Save on buffer switch
 set mouse=a
 set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
+" always ignore these files
+set wildignore+=*/vendor/**
 " Maximize GVim on start
 if has("gui_running")
     set lines=999 columns=999
@@ -161,8 +172,10 @@ set wildignore+=*/public/forum/**
 
 
 """ Key binding
+" leader
+let mapleader=","
 nmap <C-b> :NERDTreeToggle<cr>
-" "Formatting
+" Formatting
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
@@ -176,3 +189,43 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>"
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+
+""" make YCM compatible with UltiSnips (using supertab)
+
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+"Easy escaping to normal mode
+imap jj <esc>
+
+"" Buffers
+" Close buffer use: ,w
+nmap <leader>w :bd<cr>
+" Go to (n) buffer
+nmap <leader>1 :bfirst<cr>
+nmap <leader>2 :b2<cr>
+nmap <leader>3 :b3<cr>
+nmap <leader>4 :b4<cr>
+nmap <leader>5 :b5<cr>
+nmap <leader>6 :b6<cr>
+nmap <leader>7 :b7<cr>
+nmap <leader>8 :b8<cr>
+nmap <leader>9 :blast<cr>
+
+nmap <c-1> :b1<cr>
+
+nmap <C-Left> :bprevious<cr>
+nmap <C-Right> :bnext<cr>
+
+" Multiple cursors
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_prev_key='<C-f>'
+let g:multi_cursor_skip_key='<C-k>'
+let g:multi_cursor_quit_key='<Esc>'
