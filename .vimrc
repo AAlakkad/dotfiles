@@ -49,6 +49,8 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'scrooloose/nerdcommenter'
+
 
 " Snippets
 NeoBundle 'SirVer/ultisnips'
@@ -169,6 +171,9 @@ map <C-r> :CtrlPBufTag<cr>
 set wildignore+=*/vendor/**
 set wildignore+=*/public/forum/**
 
+" NERD Commenter
+let NERDSpaceDelims=1 " add space between comment delimiter and first character of code
+
 
 
 """ Key binding
@@ -181,6 +186,9 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>"
+" clear search by pressing escape
+nnoremap <CR> :noh<CR><CR>
+
 
 
 """ Auto stuff
