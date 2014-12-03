@@ -62,6 +62,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'spf13/PIV' " PHP Integration environment for Vim
 NeoBundle 'StanAngeloff/php.vim'
 NeoBundle 'xsbeats/vim-blade'
+NeoBundle 'othree/html5.vim'
 
 " Beautifying & Lintering
 NeoBundle 'maksimr/vim-jsbeautify'
