@@ -11,4 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source ~/.dotfiles/.aliases/git.zsh
+# aliases
+for file in ~/.dotfiles/.aliases/*.zsh; do
+	source $file
+done
