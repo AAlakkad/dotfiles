@@ -11,7 +11,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# paths
+export PATH=$PATH:~/npm/bin:~/.composer/vendor/bin:./wp-content/vendor/bin:./vendor/bin
+
+# default editor
+export EDITOR=vim
+
 # aliases
 for file in ~/.dotfiles/.aliases/*.zsh; do
-	source $file
+  source $file
 done
+
+
