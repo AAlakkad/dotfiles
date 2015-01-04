@@ -1,5 +1,6 @@
 # launch simple http server
-alias serve="python -m SimpleHTTPServer"
+alias server="python -m SimpleHTTPServer"
+alias serve="php -S localhost:8000"
 
 # quick cd to paths
 alias www="cd /home/ammar/www"
