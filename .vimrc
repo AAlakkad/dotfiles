@@ -72,8 +72,10 @@ NeoBundle 'einars/js-beautify'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'blerins/flattown'
+
 
 
 call neobundle#end()
@@ -124,8 +126,9 @@ set nofoldenable " disable folding
 """ Themes
 syntax enable
 set t_Co=256
+let base16colorspace=256
+colorscheme base16-ocean
 set background=dark
-colorscheme Tomorrow-Night-Bright
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
 set guioptions-=T
 set guioptions-=r
