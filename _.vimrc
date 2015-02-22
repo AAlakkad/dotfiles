@@ -1,14 +1,13 @@
-" install https://github.com/junegunn/vim-plug once to handle the plugins
-
 call plug#begin('~/.vim/plugged')
 
 " Basic stuff
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 
+Plug 'godlygeek/csapprox'
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
-Plug 'jpo/vim-railscasts-theme'
+Plug 'chriskempson/base16-vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
@@ -18,8 +17,10 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'Chiel92/vim-autoformat'
+Plug 'majutsushi/tagbar'
 
 Plug 'terryma/vim-multiple-cursors'
+Plug 'dietsche/vim-lastplace'
 
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -30,7 +31,10 @@ call plug#end()
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme jellybeans
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-tomorrow
+
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 " Local dirs
 set backupdir=~/.vim/backups
@@ -58,8 +62,35 @@ set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
 " always ignore these files
 set wildignore+=*/vendor/**
+set wildignore+=*/wordpress/**
+set wildignore+=*/node_modules/**
 
+"" Configurations
+
+" Open NERDTree for the current file argument e.g. gvim .
+if isdirectory(argv(0))
+    bd
+    autocmd vimenter * exe "cd" argv(0)
+    autocmd VimEnter * NERDTree
+endif
+
+" CtrlP
+let g:ctrlp_match_window_bottom = 0 " Show at top of window
+let g:ctrlp_working_path_mode = 0 "2  Smart path mode
+let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
+let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
+let g:ctrlp_extensions = ['dir']
+let g:ctrlp_dont_split = 'nerdtree'
+
+" Lastplace
+let g:lastplace_ignore = "gitcommit,svn"
 
 """ Key binding
 " leader
 let mapleader=","
+" NERDTree Toggle
+nmap <leader>b :NERDTreeToggle<cr>
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+" CtrlP
+map <C-p> :CtrlP<cr>
