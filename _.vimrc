@@ -14,7 +14,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet.vim'
+Plug 'SirVer/ultisnips'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'majutsushi/tagbar'
@@ -22,9 +22,14 @@ Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dietsche/vim-lastplace'
 
-
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+
+" PHP Development
+Plug 'shawncplus/phpcomplete.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'sudar/vim-wordpress-snippets'
+Plug 'dsawardekar/wordpress.vim'
 
 call plug#end()
 
@@ -81,6 +86,9 @@ let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
 let g:ctrlp_extensions = ['dir']
 let g:ctrlp_dont_split = 'nerdtree'
+
+" WordPress
+let g:wordpress_vim_wordpress_path = '/home/ammar/www/aliqtisadi/wordpress'
 
 " Lastplace
 let g:lastplace_ignore = "gitcommit,svn"
