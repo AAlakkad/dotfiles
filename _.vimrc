@@ -25,11 +25,17 @@ Plug 'dietsche/vim-lastplace'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
-" PHP Development
+Plug 'ap/vim-buftabline'
+
+Plug 'Townk/vim-autoclose'
+
+" PHP & Development
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'sudar/vim-wordpress-snippets'
 Plug 'dsawardekar/wordpress.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
 
 call plug#end()
 
@@ -65,6 +71,7 @@ set autowrite  "Save on buffer switch
 set mouse=a
 set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
+set hidden
 " always ignore these files
 set wildignore+=*/vendor/**
 set wildignore+=*/wordpress/**
@@ -102,3 +109,6 @@ nmap <leader>b :NERDTreeToggle<cr>
 nmap <F8> :TagbarToggle<CR>
 " CtrlP
 map <C-p> :CtrlP<cr>
+" Buffers
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-M> :bprev<CR>
