@@ -25,13 +25,14 @@ Plug 'dietsche/vim-lastplace'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
 
 Plug 'Townk/vim-autoclose'
 
 " PHP & Development
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'StanAngeloff/php.vim'
+Plug 'spf13/PIV'
 Plug 'sudar/vim-wordpress-snippets'
 Plug 'dsawardekar/wordpress.vim'
 Plug 'pangloss/vim-javascript'
@@ -44,6 +45,7 @@ set t_Co=256
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-tomorrow
+
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
@@ -73,9 +75,10 @@ set title " Show the filename in the window titlebar.
 set ttyfast " Send more characters at a given time.
 set hidden
 " always ignore these files
-set wildignore+=*/vendor/**
-set wildignore+=*/wordpress/**
-set wildignore+=*/node_modules/**
+set wildignore+=*/vendor/**,*/wordpress/**,*/node_modules/**,*/nbproject/**
+set nofoldenable " disable folding
+set encoding=utf-8
+
 
 "" Configurations
 
@@ -90,25 +93,42 @@ endif
 let g:ctrlp_match_window_bottom = 0 " Show at top of window
 let g:ctrlp_working_path_mode = 0 "2  Smart path mode
 let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
-let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open
+let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open<CR>
 let g:ctrlp_extensions = ['dir']
 let g:ctrlp_dont_split = 'nerdtree'
 
 " WordPress
 let g:wordpress_vim_wordpress_path = '/home/ammar/www/aliqtisadi/wordpress'
 
+" NerdTREE
+let NERDTreeIgnore = ['node_modules', 'nbproject']
+
+
 " Lastplace
 let g:lastplace_ignore = "gitcommit,svn"
+
+" NERD Commenter
+let NERDSpaceDelims=1 " add space between comment delimiter and first  character of code
 
 """ Key binding
 " leader
 let mapleader=","
+" clear search by pressing escape
+nnoremap <CR> :noh<CR><CR>
 " NERDTree Toggle
 nmap <leader>b :NERDTreeToggle<cr>
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 " CtrlP
 map <C-p> :CtrlP<cr>
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" Easy escaping to normal mode
+imap jj <esc>
 " Buffers
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-M> :bprev<CR>
+noremap <silent> <C-h> :bnext<CR>
+noremap <silent> <C-l> :bprev<CR>
+" Close buffer use: ,w
+nmap <leader>w :bd<cr>
