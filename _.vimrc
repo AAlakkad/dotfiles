@@ -41,6 +41,7 @@ Plug 'sudar/vim-wordpress-snippets'
 Plug 'dsawardekar/wordpress.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
+Plug 'HTML-AutoCloseTag'
 
 call plug#end()
 
