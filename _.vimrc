@@ -133,6 +133,9 @@ let g:easytags_suppress_ctags_warning = 1
 " Automatically strip the whitespaces for the given file types
 autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
 
+" PIV
+let g:DisableAutoPHPFolding = 1
+
 
 """ Key binding
 " leader
