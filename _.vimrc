@@ -25,7 +25,8 @@ Plug 'dietsche/vim-lastplace'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
-" Plug 'ap/vim-buftabline'
+Plug 'ap/vim-buftabline'
+Plug 'scrooloose/syntastic'
 
 Plug 'Townk/vim-autoclose'
 
@@ -103,12 +104,16 @@ let g:wordpress_vim_wordpress_path = '/home/ammar/www/aliqtisadi/wordpress'
 " NerdTREE
 let NERDTreeIgnore = ['node_modules', 'nbproject']
 
-
 " Lastplace
 let g:lastplace_ignore = "gitcommit,svn"
 
 " NERD Commenter
 let NERDSpaceDelims=1 " add space between comment delimiter and first  character of code
+
+" Syntastic
+let g:syntastic_error_symbol = '✘'
+let g:syntastic_warning_symbol = "▲"
+
 
 """ Key binding
 " leader
@@ -132,3 +137,4 @@ noremap <silent> <C-h> :bnext<CR>
 noremap <silent> <C-l> :bprev<CR>
 " Close buffer use: ,w
 nmap <leader>w :bd<cr>
+    
