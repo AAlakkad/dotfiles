@@ -25,7 +25,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'dietsche/vim-lastplace'
 Plug 'ntpeters/vim-better-whitespace'
 
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'ap/vim-buftabline'
@@ -139,7 +140,7 @@ let mapleader=","
 " clear search by pressing escape
 nnoremap <CR> :noh<CR><CR>
 " NERDTree Toggle
-nmap <leader>b :NERDTreeToggle<cr>
+nmap <leader>b :NERDTreeTabsToggle<cr>
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 " CtrlP
