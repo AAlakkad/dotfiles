@@ -23,6 +23,7 @@ Plug 'majutsushi/tagbar'
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dietsche/vim-lastplace'
+Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
@@ -125,6 +126,11 @@ let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
+
+" Better Whitespace
+" Automatically strip the whitespaces for the given file types
+autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
+
 
 """ Key binding
 " leader
