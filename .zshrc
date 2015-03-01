@@ -19,9 +19,7 @@ export PATH=$PATH:~/npm/bin:~/.composer/vendor/bin:./wp-content/vendor/bin:./ven
 export EDITOR=vim
 
 # aliases
-for file in ~/.dotfiles/.aliases/*.zsh; do
-  source $file
-done
+source ~/.aliases
 
 # Source .profile
 source ~/.profile
