@@ -3,7 +3,7 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git composer common-aliases git-extras tmux vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
