@@ -21,7 +21,7 @@ source ~/.aliases
 # Source .profile
 source ~/.profile
 
-./eyes-notifications.sh&
+~/.dotfiles/eyes-notifications.sh&
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
