@@ -12,3 +12,15 @@ set skip-completed-text on
 "\e[3~": delete-char
 "\e[1~": beginning-of-line
 "\e[4~": end-of-line
+
+set editing-mode vi
+$if mode=vi
+    set keymap vi-command
+    "gg": beginning-of-history
+    "G": end-of-history
+    set keymap vi-insert
+    "jj": vi-movement-mode
+    "\C-w": backward-kill-word
+    "\C-p": history-search-backward
+$endif
+
