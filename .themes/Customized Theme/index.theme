@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Customized Theme
+Type=X-GNOME-Metatheme
+Comment=Libra border, Ultra flat controls and icons.
+
+[X-GNOME-Metatheme]
+GtkTheme=Ultra-Flat
+MetacityTheme=Libra
+IconTheme=Ultra-Flat
+GtkColorScheme=bg_color:#dedede,fg_color:#555555,base_color:#f9f9f9,text_color:#333333,selected_bg_color:#7A7D81,selected_fg_color:#f9f9f9,tooltip_bg_color:#2d2d2d,tooltip_fg_color:#dedede,titlebar_bg_color:#2d2d2d,titlebar_fg_color:#dcdcdc,menubar_bg_color:#2d2d2d,menubar_fg_color:#dcdcdc,toolbar_bg_color:#dedede,toolbar_fg_color:#555555,menu_bg_color:#2d2d2d,menu_fg_color:#dcdcdc,panel_bg_color:#2d2d2d,panel_fg_color:#dcdcdc,link_color:#7A7D81
+CursorTheme=default
+CursorSize=18
+NotificationTheme=standard
+BackgroundImage=/home/ammar/Pictures/1ViAM6e.jpg
