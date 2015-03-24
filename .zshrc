@@ -3,7 +3,7 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(bgnotify git composer common-aliases git-extras tmux vagrant)
+plugins=(bgnotify git composer common-aliases git-extras tmux vagrant zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
