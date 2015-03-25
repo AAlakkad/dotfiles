@@ -142,7 +142,6 @@ let g:DisableAutoPHPFolding = 1
 
 " Lightline.vim
 let g:lightline = {
-            \ 'colorscheme': 'landscape',
             \ 'mode_map': { 'c': 'NORMAL' },
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
