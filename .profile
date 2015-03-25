@@ -1,4 +1,3 @@
-xrdb -load ~/.Xresources
 # Fix vim colors by changing TERM value when inside Tmux
 if [[ -z $TMUX ]]; then
     if [ -e /usr/share/terminfo/x/xterm+256color ]; then # may be xterm-256 depending on your distro
@@ -13,3 +12,5 @@ else
         export TERM='screen'
     fi
 fi
+~/base16-shell/base16-tomorrow.dark.sh
+xrdb -load ~/.Xresources
