@@ -29,8 +29,8 @@ URxvt.lineSpace:            8
 ! Fonts
 /* URxvt.allow_bold:           false */
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:PT Mono:pixelsize=16
-URxvt*boldFont: xft:PT Mono:pixelsize=16
+URxvt*font: xft:PT Mono For Powerline:pixelsize=16
+URxvt*boldFont: xft:PT Mono For Powerline:pixelsize=16
 
 ! Fix font space
 URxvt*letterSpace: -1
