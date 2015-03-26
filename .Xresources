@@ -1,8 +1,6 @@
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 ! Base16 Tomorrow
-! Scheme: Chris Kempson (http://chriskempson.com)
-
 #define base00 #1d1f21
 #define base01 #282a2e
 #define base02 #373b41
@@ -19,25 +17,87 @@ URxvt*keysym.End: \033[4~
 #define base0D #81a2be
 #define base0E #b294bb
 #define base0F #a3685a
+*.foreground: base05
+*.background: base00
+*.cursorColor: base05
+*.color0: base00
+*.color1: base08
+*.color2: base0B
+*.color3: base0A
+*.color4: base0D
+*.color5: base0E
+*.color6: base0C
+*.color7: base05
+*.color8: base03
+*.color9: base08
+*.color10: base0B
+*.color11: base0A
+*.color12: base0D
+*.color13: base0E
+*.color14: base0C
+*.color15: base07
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16: base09
+*.color17: base0F
+*.color18: base01
+*.color19: base02
+*.color20: base04
+*.color21: base06
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
+!-------------------------------------------------------------------------------
+! URxvt settings
+!-------------------------------------------------------------------------------
 
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
+URxvt.depth:                32
+URxvt.geometry:             160x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       0
+URxvt.lineSpace:            8
+
+! Fonts
+/* URxvt.allow_bold:           false */
+URxvt*font: xft:PT Mono For Powerline:pixelsize=16
+URxvt*boldFont: xft:PT Mono For Powerline:pixelsize=16
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher,clipboard
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Enable CTRL+SHIFT+(C/V) for copy/paste
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+! Scrolling
+URxvt.scrollstyle: rxvt
+URxvt*scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
