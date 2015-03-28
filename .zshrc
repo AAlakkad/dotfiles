@@ -10,7 +10,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # paths
-export PATH=$PATH:~/npm/bin:~/.composer/vendor/bin:./wp-content/vendor/bin:./vendor/bin:.
+export PATH=$PATH:~/npm/bin:~/.composer/vendor/bin:./wp-content/vendor/bin:./vendor/bin:.:~/.local/bin
 
 # default editor
 export EDITOR=vim
