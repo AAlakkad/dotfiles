@@ -122,6 +122,8 @@ else
   # Install
   notice "Installing"
   install
+  # Merge xresources
+  xrdb -merge ~/.Xresources
 fi
 
 
