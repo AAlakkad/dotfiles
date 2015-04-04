@@ -44,6 +44,7 @@ Plug 'spf13/PIV'
 Plug 'sudar/vim-wordpress-snippets'
 Plug 'dsawardekar/wordpress.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'HTML-AutoCloseTag'
 
@@ -123,7 +124,7 @@ let NERDSpaceDelims=1 " add space between comment delimiter and first  character
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 
-" xolox/vim-easytags settings 
+" xolox/vim-easytags settings
 " Where to look for tags files
 set tags=~/.vimtags
 " Sensible defaults
@@ -132,6 +133,9 @@ let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
 let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
+
+" JavaScript Libraries Syntax
+let g:used_javascript_libs = 'angular, jquery'
 
 " Better Whitespace
 " Automatically strip the whitespaces for the given file types
@@ -170,8 +174,8 @@ endfunction
 
 function! MyFilename()
     return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-                \ (&ft == 'vimfiler' ? vimfiler#get_status_string() : 
-                \  &ft == 'unite' ? unite#get_status_string() : 
+                \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+                \  &ft == 'unite' ? unite#get_status_string() :
                 \  &ft == 'vimshell' ? vimshell#get_status_string() :
                 \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
                 \ ('' != MyModified() ? ' ' . MyModified() : '')
