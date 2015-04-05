@@ -47,6 +47,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/html5.vim'
 Plug 'HTML-AutoCloseTag'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
