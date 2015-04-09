@@ -122,6 +122,8 @@ else
   # Install
   notice "Installing"
   install
+  xrdb -load .Xdefaults
+  xrdb -merge .Xresources
 fi
 
 
