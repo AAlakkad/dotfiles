@@ -1,3 +1,5 @@
+urxvt*internalBorder: 5
+URxvt*dynamicColors: on
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 ! Base16 Tomorrow
