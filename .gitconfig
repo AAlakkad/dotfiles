@@ -1,0 +1,8 @@
+[user]
+	name = Ammar Alakkad
+	email = am.alakkad@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
