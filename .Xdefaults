@@ -26,7 +26,7 @@ URxvt.saveLines:            50
 URxvt.internalBorder:       0
 URxvt.lineSpace:            8
 URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
-URxvt.title:                Terminal
+URxvt.title:                "Terminal"
 
 ! Fonts
 /* URxvt.allow_bold:           false */
@@ -42,7 +42,7 @@ URxvt.scrollBar:            false
 
 ! Perl extensions
 Urxvt*perl-lib:        /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:      default,matcher,tabbed,fullscreen
+URxvt.perl-ext-common:      default,matcher,fullscreen
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          firefox
 ! Fullscreen switch
