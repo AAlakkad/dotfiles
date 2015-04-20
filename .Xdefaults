@@ -25,11 +25,13 @@ URxvt.loginShell:           true
 URxvt.saveLines:            50
 URxvt.internalBorder:       0
 URxvt.lineSpace:            8
+URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
+URxvt.title:                Terminal
 
 ! Fonts
 /* URxvt.allow_bold:           false */
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Sauce Code Powerline:pixelsize=15:antialias=true:hinting:true,xft:Monospace:size=15:antialias=true:hinting=true
+URxvt*font: xft:Sauce Code Powerline:pixelsize=15:antialias=false:hinting:true,xft:Monospace:size=15:antialias=false:hinting=true
 
 ! Fix font space
 URxvt*letterSpace: -1
@@ -39,9 +41,12 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher
+Urxvt*perl-lib:        /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:      default,matcher,tabbed,fullscreen
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          firefox
+! Fullscreen switch
+URxvt.keysym.F11:       perl:fullscreen:switch
 
 ! Cursor
 URxvt.cursorBlink:          true
