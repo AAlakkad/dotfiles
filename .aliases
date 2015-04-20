@@ -1,6 +1,7 @@
 # launch simple http server
 alias server="python -m SimpleHTTPServer"
 alias serve="php -S localhost:8000"
+alias tmux="tmux -2" # Run tmux with 256 colors support
 
 # quick cd to paths
 alias www="cd /home/ammar/www"
