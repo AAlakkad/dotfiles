@@ -165,9 +165,14 @@ bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
 bindsym $mod+Shift+E exec $dir/i3-exit
 bindsym XF86PowerOff exec $dir/i3-exit
 
+# Colors
 set $blue #005588
 set $gray1 #484848
 set $gray2 #333333
+
+client.focused            $gray1   $gray1   #FFFFFF   #333333
+client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
+client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
