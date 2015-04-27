@@ -3,4 +3,4 @@ URxvt*dynamicColors: on
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
-#include "colorschemes/material.txt"
+#include "~/.dotfiles/colorschemes/material.txt"
