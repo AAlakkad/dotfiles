@@ -1,5 +1,5 @@
 # use xresources
-xrdb -merge ~/.i3/xresources
+xrdb -merge ~/.Xresources
 
 # background
 [ -e ~/.fehbg ] && source ~/.fehbg
