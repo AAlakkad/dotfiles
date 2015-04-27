@@ -194,6 +194,8 @@ for_window [class="(?i)gnome-calculator"] floating enable
 for_window [class="(?i)lighthouse"] floating enable
 for_window [window_role="(?i)pop-up"] floating enable
 
+# rename workspace
+bindsym $mod+Shift+y exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # Start synapse to launch applications
 bindsym $mod+F3 exec synapse
