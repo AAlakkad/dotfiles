@@ -181,7 +181,8 @@ bar {
         mode hide
         hidden_state hide
         modifier $mod
-        status_command i3status
+        # status_command i3status
+        status_command ~/.i3/conky/conky-i3bar
         colors {
                 statusline #AAAAAA
                 background #333333
