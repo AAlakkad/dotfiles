@@ -165,6 +165,10 @@ bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
 bindsym $mod+Shift+E exec $dir/i3-exit
 bindsym XF86PowerOff exec $dir/i3-exit
 
+set $blue #005588
+set $gray1 #484848
+set $gray2 #333333
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -172,6 +176,12 @@ bar {
         hidden_state hide
         modifier $mod
         status_command i3status
+        colors {
+                statusline #AAAAAA
+                background #333333
+                focused_workspace $gray2 $gray2 #FFFFFF
+                inactive_workspace $gray1 $gray1 #AAAAAA
+        }
 }
 
 # Start synapse to launch applications
