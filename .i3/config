@@ -180,6 +180,8 @@ bar {
         mode hide
         hidden_state hide
         modifier $mod
+        position top
+        strip_workspace_numbers yes
         # status_command i3status
         font pango: PT Mono, FontAwesome 10
         status_command ~/.i3/conky/conky-i3bar
@@ -195,6 +197,12 @@ bar {
 for_window [class="(?i)gnome-calculator"] floating enable
 for_window [class="(?i)lighthouse"] floating enable
 for_window [window_role="(?i)pop-up"] floating enable
+
+# Remove borders
+new_window 1pixel
+
+# Popups during fullscreen mode
+popup_during_fullscreen smart
 
 # rename workspace
 bindsym $mod+Shift+y exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
