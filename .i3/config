@@ -214,15 +214,26 @@ bindsym $mod+Shift+y exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 # Start synapse to launch applications
 bindsym $mod+F3 exec synapse
 
+
+##############################################
+####### Startup Applications and Stuff #######
+##############################################
+
 # Auto lock
 exec xautolock -time 5 -locker screenlock`
-
 # ctr + alt + l
 bindsym Control+Mod1+l exec gnome-screensaver-command -l
-
 # Start network manager applet
 exec --no-startup-id nm-applet
-
-
 # Languages
 exec --no-startup-id "setxkbmap -model pc105 -layout us,ar -option grp:alt_shift_toggle"
+# Set background
+exec --no-startup-id [ -e ~/.fehbg ] && source ~/.fehbg
+# hide mouse coursor when it isn't used
+exec --no-startup-id unclutter -root -visible &
+
+# notification
+exec --no-startup-id dunst -config ~/.i3/dunstrc &
+
+# terminal daemon
+exec --no-startup-id urxvtd -q -f -o
