@@ -24,6 +24,3 @@ dunst -config ~/.i3/dunstrc &
 
 # terminal daemon
 urxvtd -q -f -o
-
-# Launch i3 window manager
-exec i3
