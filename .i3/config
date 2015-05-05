@@ -228,7 +228,7 @@ exec --no-startup-id nm-applet
 # Languages
 exec --no-startup-id "setxkbmap -model pc105 -layout us,ar -option grp:alt_shift_toggle"
 # Set background
-exec --no-startup-id [ -e ~/.fehbg ] && source ~/.fehbg
+exec --no-startup-id ~/.fehbg
 # hide mouse coursor when it isn't used
 exec --no-startup-id unclutter -root -visible &
 
