@@ -12,3 +12,6 @@ unclutter -root -visible &
 
 # notification
 dunst -config ~/.i3/dunstrc &
+
+# terminal daemon
+urxvtd -q -f -o
