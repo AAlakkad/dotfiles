@@ -2,7 +2,7 @@
     font = PT Mono 10
     allow_markup = yes
 
-    format = "%a: %s %b"
+    format = "%s %b"
     sort = yes
     indicate_hidden = yes
     alignment = left
