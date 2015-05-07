@@ -144,7 +144,9 @@ autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer
 let g:DisableAutoPHPFolding = 1
 
 " Lightline.vim
+set noshowmode " don't show the -- Mode -- line, it's already in lightline
 let g:lightline = {
+            \ 'colorscheme': 'wombat',
             \ 'mode_map': { 'c': 'NORMAL' },
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
@@ -159,8 +161,8 @@ let g:lightline = {
             \   'fileencoding': 'MyFileencoding',
             \   'mode': 'MyMode',
             \ },
-            \ 'separator': { 'left': '⮀', 'right': '⮂' },
-            \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+            \ 'separator': { 'left': '', 'right': '' },
+            \ 'subseparator': { 'left': '', 'right': '' }
             \ }
 
 function! MyModified()
