@@ -53,7 +53,7 @@ call plug#end()
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme default
+colorscheme flatlandia
 
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
