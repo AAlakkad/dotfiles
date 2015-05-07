@@ -12,5 +12,4 @@ else
         export TERM='screen'
     fi
 fi
-xrdb -load ~/.Xdefaults
-xrdb -merge ~/.Xresources
+xrdb ~/.Xresources
