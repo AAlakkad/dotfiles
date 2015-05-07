@@ -8,8 +8,7 @@ Plug 'godlygeek/csapprox'
 Plug 'itchyny/lightline.vim'
 
 " Colorschemes
-Plug 'nanotech/jellybeans.vim'
-Plug 'chriskempson/base16-vim'
+Plug 'flazz/vim-colorschemes'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
@@ -54,8 +53,7 @@ call plug#end()
 syntax enable
 set t_Co=256
 set background=dark
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-tomorrow
+colorscheme default
 
 
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
