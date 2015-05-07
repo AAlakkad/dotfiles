@@ -230,5 +230,3 @@ noremap <silent> <C-h> :bnext<CR>
 noremap <silent> <C-l> :bprev<CR>
 " Close buffer use: ,w
 nmap <leader>w :bd<cr>
-" Hide tmux status bar
-autocmd VimEnter,VimLeave * silent !tmux set status
