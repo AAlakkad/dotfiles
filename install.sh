@@ -64,7 +64,7 @@ in_array() {
 #-----------------------------------------------------------------------------
 
 backupdir="$HOME/.dotfiles-backup/$(date "+%Y%m%d%H%M.%S")"
-dependencies=(git vim)
+dependencies=(git vim dunst urxvt)
 excluded=(. .. .git .gitignore .gitmodules install.sh Gemfile Gemfile.lock Rakefile README.md)
 
 
@@ -122,7 +122,6 @@ else
   # Install
   notice "Installing"
   install
-  xrdb -load .Xdefaults
   xrdb -merge .Xresources
 fi
 
