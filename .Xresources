@@ -26,7 +26,7 @@ URxvt.saveLines:            50
 URxvt.internalBorder:       0
 URxvt.lineSpace:            8
 URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
-URxvt.title:                "Terminal"
+URxvt.title:                Terminal
 
 ! Fonts
 /* URxvt.allow_bold:           false */
