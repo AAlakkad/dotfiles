@@ -31,7 +31,7 @@ URxvt.title:                Terminal
 ! Fonts
 /* URxvt.allow_bold:           false */
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=15:antialias=false:hinting:true,xft:Monospace:size=15:antialias=false:hinting=true
+URxvt*font: xft:PT Mono for Powerline:pixelsize=15:antialias=false:hinting:true,xft:Monospace:size=15:antialias=false:hinting=true
 
 ! Fix font space
 URxvt*letterSpace: -1
