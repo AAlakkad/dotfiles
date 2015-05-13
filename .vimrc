@@ -37,16 +37,16 @@ Plug 'scrooloose/syntastic'
 Plug 'Townk/vim-autoclose'
 
 " PHP & Development
-Plug 'shawncplus/phpcomplete.vim'
-Plug 'StanAngeloff/php.vim'
-Plug 'spf13/PIV'
-Plug 'sudar/vim-wordpress-snippets'
-Plug 'dsawardekar/wordpress.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/html5.vim'
-Plug 'HTML-AutoCloseTag'
-Plug 'mattn/emmet-vim'
+Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'spf13/PIV', {'for': 'php'}
+Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
+Plug 'dsawardekar/wordpress.vim', {'for': 'php'}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
+Plug 'othree/html5.vim', {'for': ['html', 'php']}
+Plug 'HTML-AutoCloseTag', {'for': ['html', 'php']}
+Plug 'mattn/emmet-vim', {'for': ['html', 'php']}
 
 call plug#end()
 
