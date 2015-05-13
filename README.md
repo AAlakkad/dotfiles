@@ -3,6 +3,9 @@ dotfiles
 
 Misc config files
 
-Use these for shell/terminal colorscheme:
-- [base16-shell](https://github.com/chriskempson/base16-shell).
-- [base16-gnome-terminal](https://github.com/chriskempson/base16-gnome-terminal)
+## Notes:
+- Install [HHVM](https://github.com/facebook/hhvm/wiki/Prebuilt-packages-on-Ubuntu-14.04) in order for Composer alias to work
+
+## Fonts
+- [Fira Sans](https://github.com/mozilla/Fira)
+
