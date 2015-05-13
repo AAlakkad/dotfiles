@@ -4,10 +4,10 @@ Type=X-GNOME-Metatheme
 Comment=
 
 [X-GNOME-Metatheme]
-GtkTheme=fog_black_nightmare
+GtkTheme=Numix
 MetacityTheme=Numix
 IconTheme=Numix-Circle
-GtkColorScheme=bg_color:#262626,fg_color:#dedede,base_color:#262626,text_color:#dedede,selected_bg_color:#E34234,selected_fg_color:#f9f9f9,tooltip_bg_color:#262626,tooltip_fg_color:#f9f9f9,titlebar_bg_color:#262626,titlebar_fg_color:#dcdcdc,menubar_bg_color:#262626,menubar_fg_color:#dcdcdc,toolbar_bg_color:#262626,toolbar_fg_color:#555555,menu_bg_color:#262626,menu_fg_color:#dcdcdc,panel_bg_color:#262626,panel_fg_color:#dcdcdc,link_color:#fc6f5d
+GtkColorScheme=bg_color:#dedede,fg_color:#555555,base_color:#f9f9f9,text_color:#333333,selected_bg_color:#d64937,selected_fg_color:#f9f9f9,tooltip_bg_color:#2d2d2d,tooltip_fg_color:#dedede,titlebar_bg_color:#2d2d2d,titlebar_fg_color:#dcdcdc,menubar_bg_color:#2d2d2d,menubar_fg_color:#dcdcdc,toolbar_bg_color:#dedede,toolbar_fg_color:#555555,menu_bg_color:#2d2d2d,menu_fg_color:#dcdcdc,panel_bg_color:#2d2d2d,panel_fg_color:#dcdcdc,link_color:#fc6f5d
 CursorTheme=default
 CursorSize=18
 NotificationTheme=standard
