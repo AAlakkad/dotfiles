@@ -4,7 +4,7 @@ alias serve="php -S localhost:8000"
 alias tmux="tmux -2" # Run tmux with 256 colors support
 
 # composer using hhvm
-alias composer=hhvm -v ResourceLimit.SocketDefaultTimeout=100 -v Http.SlowQueryThreshold=300000 /usr/local/bin/composer
+alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=100 -v Http.SlowQueryThreshold=300000 /usr/local/bin/composer"
 
 # quick cd to paths
 alias www="cd /home/ammar/www"
