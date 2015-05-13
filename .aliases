@@ -11,7 +11,7 @@ alias t="/home/ammar/Apps/todo.txt/todo.sh"
 # Aliases
 alias g='git'
 compdef g=git
-alias gst='git status'
+alias gst='git status -s'
 compdef _git gst=git-status
 alias gd='git diff'
 compdef _git gd=git-diff
