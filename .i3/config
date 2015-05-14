@@ -138,7 +138,7 @@ bindsym $mod+Shift+r restart
 for_window [class="^.*"] border pixel 0
 
 gaps inner 4
-gaps outer 4
+gaps outer 0
 #smart_gaps on
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
