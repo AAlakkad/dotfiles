@@ -32,7 +32,7 @@ URxvt.title:                Terminal
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
 URxvt*font: xft:Fira Mono:pixelsize=12:antialias=false:hinting:true,xft:Monospace:size=15:antialias=false:hinting=true
-URxvt.font-size.zoomfont: xft:Terminess Powerline:pixelsize=13
+URxvt.font-size.zoomfont: xft:Fira Mono:pixelsize=12
 URxvt.font-size.step: 2
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
