@@ -106,6 +106,23 @@ let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
 let g:ctrlp_jump_to_buffer = 2 " Jump to tab AND buffer if already open<CR>
 let g:ctrlp_extensions = ['dir']
 let g:ctrlp_dont_split = 'nerdtree'
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
+                          \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
+let g:ctrlp_cmd = 'CtrlPMixed'
+if executable('ag')
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command =
+        \ 'ag %s -i --nocolor --nogroup --hidden
+        \ --ignore .git
+        \ --ignore .svn
+        \ --ignore .hg
+        \ --ignore .DS_Store
+        \ --ignore "**/*.pyc"
+        \ -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+endif
 
 " WordPress
 let g:wordpress_vim_wordpress_path = '/home/ammar/www/aliqtisadi/wordpress'
@@ -139,6 +156,10 @@ let g:used_javascript_libs = 'angular, jquery'
 " Better Whitespace
 " Automatically strip the whitespaces for the given file types
 autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 0
 
 " PIV
 let g:DisableAutoPHPFolding = 1
