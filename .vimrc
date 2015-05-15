@@ -40,6 +40,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'spf13/PIV', {'for': 'php'}
+Plug 'xsbeats/vim-blade', {'for': 'php'}
 Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
@@ -47,6 +48,7 @@ Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
 Plug 'othree/html5.vim', {'for': ['html', 'php']}
 Plug 'HTML-AutoCloseTag', {'for': ['html', 'php']}
 Plug 'mattn/emmet-vim', {'for': ['html', 'php']}
+Plug 'Valloric/MatchTagAlways', {'for': ['html', 'php']}
 
 call plug#end()
 
