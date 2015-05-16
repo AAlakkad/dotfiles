@@ -39,6 +39,7 @@ Plug 'Townk/vim-autoclose'
 " PHP & Development
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'bpearson/vim-phpcs', {'for': 'php'}
 Plug 'spf13/PIV', {'for': 'php'}
 Plug 'xsbeats/vim-blade', {'for': 'php'}
 Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
@@ -141,6 +142,8 @@ let NERDSpaceDelims=1 " add space between comment delimiter and first  character
 " Syntastic
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
+" Settings for PHP CodeSniffer
+let g:phpcs_std_list="PSR2"
 
 " xolox/vim-easytags settings
 " Where to look for tags files
