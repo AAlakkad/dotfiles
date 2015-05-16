@@ -222,13 +222,19 @@ bindsym $mod+Shift+E exec $dir/i3-exit
 bindsym XF86PowerOff exec $dir/i3-exit
 
 # Colors
+set $black #000000
 set $blue #005588
-set $gray1 #484848
+set $gray0 #AAAAAA
+set $base04 #b4b7b4
 set $gray2 #333333
+set $base00 #1d1f21
+set $base05 #c5c8c6
+set $base04 #b4b7b4
 
-client.focused            $gray1   $gray1   #FFFFFF   #333333
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.unfocused          $gray2   $gray2   #FFFFFF   #000000
+# class                   border    backgr.   text      indicator
+client.focused            $base04   $base04   $base00   $gray2
+client.focused_inactive   $base00   $base00   $base04   $black
+client.unfocused          $base00   $base00   $base04   $black
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -241,10 +247,10 @@ bar {
         font pango: PT Mono, FontAwesome 10
         status_command ~/.i3/conky/conky-i3bar
         colors {
-                statusline #AAAAAA
-                background #333333
-                focused_workspace $gray2 $gray2 #FFFFFF
-                inactive_workspace $gray1 $gray1 #AAAAAA
+                statusline $base04
+                background $base00
+                focused_workspace $gray2 $gray2 $base05
+                inactive_workspace $base00 $base00 $gray0
         }
 }
 
