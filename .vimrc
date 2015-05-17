@@ -6,6 +6,7 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'godlygeek/csapprox'
 Plug 'itchyny/lightline.vim'
+Plug 'godlygeek/tabular'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -15,7 +16,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'Shougo/neocomplete.vim'
-Plug 'SirVer/ultisnips'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'xolox/vim-misc'
@@ -34,7 +36,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-bufferline'
 Plug 'scrooloose/syntastic'
 
-Plug 'Townk/vim-autoclose'
+Plug 'Raimondi/delimitMate'
 
 " PHP & Development
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
@@ -166,6 +168,19 @@ autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_select = 0
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" neosnippet
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 
 " PIV
 let g:DisableAutoPHPFolding = 1
