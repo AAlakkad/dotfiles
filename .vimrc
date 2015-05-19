@@ -5,7 +5,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 
 Plug 'godlygeek/csapprox'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 Plug 'godlygeek/tabular'
 
 " Colorschemes
@@ -275,3 +275,39 @@ noremap <silent> <C-h> :bnext<CR>
 noremap <silent> <C-l> :bprev<CR>
 " Close buffer use: ,w
 nmap <leader>w :bd<cr>
+
+
+" Manual Status line
+let &statusline  = "%#StatusLineNC# %{getcwd()==$HOME?'~':fnamemodify(getcwd(), ':t')}%* "
+let &statusline .= "%f"
+let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%* "
+let &statusline .= '%1*%{&modified && !&readonly?"\u25cf":""}%*'
+let &statusline .= '%1*%{&modified && &readonly?"\u25cb":""}%*'
+let &statusline .= '%2*%{&modifiable?"":"\u25cb"}%*'
+let &statusline .= '%3*%{&readonly && &modifiable && !&modified?"\u25cb":""}%*'
+let &statusline .= "%="
+let &statusline .= "%#StatusLineNC#%{StatuslineIndent()}%* "
+let &statusline .= '%#StatuslineNC#%{(strlen(&fileencoding) && &fileencoding !=# &encoding)?&fileencoding." ":""}'
+let &statusline .= '%{&fileformat!="unix"?" (".&fileformat.") ":""}%*'
+let &statusline .= '%{strlen(&filetype)?&filetype." ":""}'
+let &statusline .= '%#Error#%{exists("*SyntasticStatuslineFlag")?SyntasticStatuslineFlag():""}%*'
+
+function! StatuslineGit()
+  if !exists('*fugitive#head')
+    return ''
+  endif
+  let l:out = fugitive#head(8)
+  if l:out !=# ''
+    let l:out = ' @ ' . l:out
+  endif
+  return l:out
+endfunction
+
+function! StatuslineIndent()
+  if !&modifiable
+    return ''
+  endif
+  let l:symbol = &expandtab ? "\u2022" : "\u21e5 "
+  let l:amount = exists('*shiftwidth') ? shiftwidth() : &shiftwidth
+  return &expandtab ? repeat(l:symbol, l:amount) : l:symbol
+endfunction
