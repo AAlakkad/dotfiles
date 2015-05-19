@@ -41,7 +41,6 @@ Plug 'Raimondi/delimitMate'
 " PHP & Development
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'bpearson/vim-phpcs', {'for': 'php'}
 Plug 'spf13/PIV', {'for': 'php'}
 Plug 'xsbeats/vim-blade', {'for': 'php'}
 Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
@@ -144,8 +143,11 @@ let NERDSpaceDelims=1 " add space between comment delimiter and first  character
 " Syntastic
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
-" Settings for PHP CodeSniffer
-let g:phpcs_std_list="PSR2"
+
+let g:syntastic_php_phpcs_post_args = " --encoding=utf-8"
+" Use PSR2 standard instead of default PEAR
+" http://www.php-fig.org/psr/2/
+let g:syntastic_php_phpcs_post_args .= " --standard=PSR2"
 
 " xolox/vim-easytags settings
 " Where to look for tags files
